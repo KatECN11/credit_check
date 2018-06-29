@@ -49,6 +49,32 @@ class CreditCheckTest < Minitest::Test
   def test_is_validity_valid
     credit_check = CreditCheck.new
     assert_equal "valid", credit_check.validity(true)
-  end 
+  end
+
+ #  def test_does_check_sum_valid
+ #
+ #    credit_check = CreditCheck.new
+ #    assert_equal "The check digit of 3 matches the test number. The card is valid.", credit_check.check_sum_validation(5541808923795240)
+ #  end
+ #
+ #  def test_does_it_return_noncheck_array
+ #    credit_check = CreditCheck.new
+ #    assert_equal [4,2,5,9,7,3,2,9,8,0,8,1,4,5,5], credit_check.get_noncheck_numbers(0,4,2,5,9,7,3,2,9,8,0,8,1,4,5,5])
+ #  end
+ #
+ #  def test_does_it_sum
+ #    credit_check = CreditCheck.new
+ #    assert_equal 72, credit_check.sum_noncheck_numbers([4,2,5,9,7,3,2,9,8,0,8,1,4,5,5])
+ #  end
+ #
+ #  def test_get_correct_check_number
+ #    credit_check = CreditCheck.new
+ #    assert_equal 8, credit_check.get_test_number(72)
+ #  end
+ #
+ #  def test_do_check_digits_compare
+ #    credit_check = CreditCheck.new
+ #    assert_equal "The check digit of 3 matches the test number. The card is valid.", credit_check.check_digit_compare(3, 3)
+ # end
 
 end

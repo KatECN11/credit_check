@@ -16,6 +16,8 @@ class CreditCheck
     return "The card number #{card_number} is #{validity}."
   end
 
+
+
   def string_to_digit_array(card_number)
     if card_number.class == String
       card_number_digits = card_number.to_i.digits
@@ -73,4 +75,47 @@ class CreditCheck
       return "invalid"
     end
   end
+
+  # def check_sum_validation(card_number)
+  #   all_digits = string_to_digit_array(card_number)
+  #   non_check_numbers = get_noncheck_numbers(all_digits)
+  #   noncheck_sum = sum_noncheck_numbers(non_check_numbers)
+  #   test_number = get_test_number(noncheck_sum)
+  #   check_digit = check_digit(all_digits)
+  #   check_digit_compare(test_number, check_digit)
+  #
+  # end
+  #
+  #
+  # def get_noncheck_numbers(all_digits)
+  #   all_digits.shift
+  #   return all_digits
+  # end
+  #
+  # def sum_noncheck_numbers(non_check_numbers)
+  #   total = 0
+  #   non_check_numbers.each do |number|
+  #     total += number
+  #   end
+  #   return total
+  # end
+  #
+  # def get_test_number(noncheck_total)
+  #     test_number = (noncheck_total * 9) % 10
+  # end
+  #
+  # def check_digit(all_digits)
+  #   all_digits.shift
+  # end
+  #
+  # def check_digit_compare(test_number, check_digit)
+  #   if test_number == check_digit
+  #     "The check digit of #{check_digit} matches the test number. The card is valid."
+  #   else
+  #     "The check digit of #{check_digit} does not match the test check digit of #{test_number}."
+  #   end
+  # end
+
+
+
 end
